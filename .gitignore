@@ -1,0 +1,4 @@
+*.o
+*.a
+noiz2sa
+xmltest
