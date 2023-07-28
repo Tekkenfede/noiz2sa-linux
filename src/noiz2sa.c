@@ -280,7 +280,7 @@ int main(int argc, char *argv[]) {
     SDL_PollEvent(&event);
     keys = SDL_GetKeyState(NULL);
     if ( keys[SDLK_ESCAPE] == SDL_PRESSED || event.type == SDL_QUIT ) done = 1;
-    if ( keys[SDLK_p] == SDL_PRESSED ) {
+    if ( keys[SDLK_p] == SDL_PRESSED || keys[SDLK_RETURN] == SDL_PRESSED) {
       if ( !pPrsd ) {
 	if ( status == IN_GAME ) {
 	  status = PAUSE;
