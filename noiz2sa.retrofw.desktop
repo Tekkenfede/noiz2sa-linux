@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=noiz2sa
+Comment=Abstract shootem up game.
+Exec=noiz2sa
+Terminal=false
+Type=Game
+StartupNotify=true
+Icon=noiz2sa
+Categories=games;
+Version=20230728
+X-OD-Manual=readme_e.txt

@@ -1,4 +1,5 @@
-CC = g++
+CC ?= gcc
+CXX ?= g++
 INCLUDES = -I.
 LIBS = tinyxml/tinyxml.o tinyxml/tinyxmlparser.o tinyxml/tinyxmlerror.o
 #CXXFLAGS = -g -W -Wall -ansi -pedantic
@@ -10,7 +11,7 @@ OBJS = bulletmlparser-tinyxml.o bulletmlparser.o bulletmltree.o calc.o formula-v
 all: libbulletml.a
 
 libbulletml.a: $(OBJS)
-	$(MAKE) -C tinyxml
+	$(MAKE) CC=$(CC) CXX=$(CXX) LD=$(CXX) -C tinyxml
 	$(AR) -r libbulletml.a *.o tinyxml/tiny*.o
 
 clean:
@@ -21,10 +22,9 @@ calc.cpp: calc.yy
 	bison -y   calc.yy && mv y.tab.c calc.cpp
 
 $(OBJS): %.o: %.cpp
-	$(CC) -c $(CXXFLAGS) $(INCLUDES) $<
+	$(CXX) -c $(CXXFLAGS) $(INCLUDES) $<
 
 doxy:
 	doxygen
 
 distdir:
-

@@ -15,11 +15,11 @@ PROFILE        := NO
 
 #****************************************************************************
 
-CC     := gcc
-CXX    := g++
-LD     := g++
-AR     := ar rc
-RANLIB := ranlib
+CC     ?= gcc
+CXX    ?= g++
+LD     ?= g++
+AR     ?= ar rc
+RANLIB ?= ranlib
 
 DEBUG_CFLAGS     := -Wall -Wno-unknown-pragmas -Wno-format -g -DDEBUG
 RELEASE_CFLAGS   := -Wall -Wno-unknown-pragmas -Wno-format -O2

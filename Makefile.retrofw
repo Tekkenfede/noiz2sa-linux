@@ -1,0 +1,11 @@
+NAME    = noiz2sa
+RM      = rm -f
+CC      = mipsel-linux-gcc
+CXX     = mipsel-linux-g++
+
+include common.mk
+
+.PHONY: opk
+
+opk: $(NAME) noiz2sa_share noiz2sa.ico noiz2sa.png readme.txt readme_e.txt noiz2sa.retrofw.desktop
+	mksquashfs $^ $(NAME).opk -noappend -no-xattrs
