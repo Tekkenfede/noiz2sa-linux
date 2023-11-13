@@ -78,7 +78,7 @@ static void loadSprites() {
 				   SDL_HWSURFACE | SDL_SRCCOLORKEY);
     SDL_SetColorKey(sprite[i], SDL_SRCCOLORKEY | SDL_RLEACCEL, 0);
   }
-  color[0].r = color[0].g = color[0].b = 60;
+  color[0].r = color[0].g = color[0].b = 255;
   SDL_SetColors(video, color, 0, 1);
 }
 
@@ -96,7 +96,7 @@ static void initPalette() {
     color[i].g = color[i].g*brightness/256;
     color[i].b = color[i].b*brightness/256;
   }
-  SDL_SetColors(video, color, 40, 75);
+  SDL_SetColors(video, color, 256, 75);
   SDL_SetColors(layer, color, 0, 256);
   SDL_SetColors(lpanel, color, 0, 10);
   SDL_SetColors(rpanel, color, 0, 10);
