@@ -78,7 +78,7 @@ static void loadSprites() {
 				   SDL_HWSURFACE | SDL_SRCCOLORKEY);
     SDL_SetColorKey(sprite[i], SDL_SRCCOLORKEY | SDL_RLEACCEL, 0);
   }
-  color[0].r = color[0].g = color[0].b = 255;
+  color[0].r = color[0].g = color[0].b = 60;
   SDL_SetColors(video, color, 0, 1);
 }
 
