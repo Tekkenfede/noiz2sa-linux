@@ -96,8 +96,8 @@ static void initPalette() {
     color[i].g = color[i].g*brightness/550;
     color[i].b = color[i].b*brightness/550;
   }
-  SDL_SetColors(video, color, 0, 390);
-  SDL_SetColors(layer, color, 0, 390);
+  SDL_SetColors(video, color, 0, 170);
+  SDL_SetColors(layer, color, 0, 170);
   SDL_SetColors(lpanel, color, 0, 1);
   SDL_SetColors(rpanel, color, 0, 1);
 }
