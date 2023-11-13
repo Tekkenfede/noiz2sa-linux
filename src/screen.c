@@ -96,10 +96,10 @@ static void initPalette() {
     color[i].g = color[i].g*brightness/256;
     color[i].b = color[i].b*brightness/256;
   }
-  SDL_SetColors(video, color, 0, 75);
+  SDL_SetColors(video, color, 0, 20);
   SDL_SetColors(layer, color, 0, 50);
-  SDL_SetColors(lpanel, color, 0, 0);
-  SDL_SetColors(rpanel, color, 0, 0);
+  SDL_SetColors(lpanel, color, 0, 200);
+  SDL_SetColors(rpanel, color, 0, 200);
 }
 
 static int lyrSize;
