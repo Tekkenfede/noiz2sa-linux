@@ -92,9 +92,9 @@ void drawSprite(int n, int x, int y) {
 static void initPalette() {
   int i;
   for ( i=0 ; i<256 ; i++ ) {
-    color[i].r = color[i].r*brightness/256;
-    color[i].g = color[i].g*brightness/256;
-    color[i].b = color[i].b*brightness/256;
+    color[i].r = color[i].r*brightness/400;
+    color[i].g = color[i].g*brightness/400;
+    color[i].b = color[i].b*brightness/400;
   }
   SDL_SetColors(video, color, 0, 256);
   SDL_SetColors(layer, color, 0, 256);
